@@ -4,6 +4,6 @@ import { IntentOptions } from "./config/IntentsOptions";
 (async () => {
     const BOT = new Client({ intents: IntentOptions });
 
-    await BOT.on("ready", () => console.log(client.user?.username, "is ready!"))
+    BOT.on("ready", () => console.log(client.user?.username, "is ready!"))
     await BOT.login(process.env.BOT_TOKEN);
 })();
